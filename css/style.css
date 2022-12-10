@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  margin: 15px;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  width: 50%;
+  animation: move-up 5s ease 0s infinite alternate;
+}
+
+.hero img {
+  width: 100%;
+  padding-right: 100px;
+}
+.main {
+  width: 50%;
+}
+.main h1 {
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+.main p {
+  width: 52%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+button {
+  border: 0;
+  background-color: black;
+  color: #fff;
+  width: 200px;
+  height: 70px;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p,
+a {
+  color: #bdbdbd;
+}
+footer p a {
+  font-weight: bold;
+}
+
+@keyframes move-up {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    font-size: 1.2rem;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .hero {
+    width: 100%;
+  }
+  .hero > img {
+    padding-right: 0px;
+  }
+  .main {
+    width: 100%;
+  }
+  .main h1 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.035em;
+    text-align: left;
+  }
+  .main p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  @keyframes move-up {
+    100% {
+      transform: scale(0.5);
+    }
+  }
+}
